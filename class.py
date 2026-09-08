@@ -1,3 +1,6 @@
+import math
+
+
 class point:
     def __init__(self, x=0, y=0):
         self.x = x
@@ -8,6 +11,11 @@ class point:
         return point
 
     def distancePoint(self ,camarade : point)-> float :
+        return math.sqrt((self.x - camarade.x)**2 + (self.y - camarade.y)**2)
+
+   if __name__ == '__main__':
+
+
 
 
 
