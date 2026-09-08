@@ -41,10 +41,9 @@ def function4(liste, seuil =3):
             max = liste[i]
     return max
 
-def function5(dictio, *args):
+#def function5(dictio, *args):
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
     a = 20
