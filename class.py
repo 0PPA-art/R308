@@ -40,13 +40,13 @@ class Cercle:
         area = math.pi * rayon**2 # pi*r^2
         return area
 
-    def intersection(self, a : float, b : float)-> float :
-        d = math.sqrt((a)**2 + (b)**2)
-        if d > a + b:
-            msg = "il est en intersection : "
-            return msg
+    def intersection(self, a : Cercle) -> bool:
+        if self.centre.distancePoint(a.centre) < (self.rayon + a.rayon)
+            d = math.sqrt((a)**2 + (b)**2)
+            return true
 
-    def pointinstersection(self, a : float, b : float)-> float :
+
+    def pointinstersection(a : float, b : float)-> float :
         d = math.sqrt(a**2 + b**2)
 
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
        print(f"{Cercle.perimeter(c1, p2.x, p2.y): .2f}")
        print(f"{Cercle.area(c1, p2.x, p2.y): .2f}")
-       print(f"{Cercle.intersection(c1, r1, r2): .2f}")
+       print(f"{Cercle.intersection(r1, r2): .2f}")
 
 
 
