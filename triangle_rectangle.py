@@ -2,7 +2,6 @@ import math
 
 
 class Point:
-    """Classe représentant un point dans un plan de coordonnées (x, y)."""
 
     def __init__(self, x=0, y=0):
         self.x = x
@@ -13,37 +12,27 @@ class Point:
 
 
 class TriangleRectangle:
-    """Classe représentant un triangle rectangle."""
 
     def __init__(self, cote_a, cote_b, point_angle_droit=None):
-        """
-        Constructeur avec deux modes d'instanciation :
-        1. TriangleRectangle(cote_a, cote_b) -> Point initialisé à (0,0)
-        2. TriangleRectangle(cote_a, cote_b, point_angle_droit) -> Point spécifié
-        """
+
         self.cote_a = float(cote_a)
         self.cote_b = float(cote_b)
 
-        # Si aucun point n'est fourni, on l'initialise à l'origine (0, 0)
         if point_angle_droit is None:
             self.point_angle_droit = Point(0, 0)
         else:
             self.point_angle_droit = point_angle_droit
 
     def hypothenuse(self):
-        """Calcule et retourne la valeur de l'hypothénuse."""
         return math.sqrt(self.cote_a ** 2 + self.cote_b ** 2)
 
     def perimetre(self):
-        """Calcule et retourne le périmètre du triangle."""
         return self.cote_a + self.cote_b + self.hypothenuse()
 
     def surface(self):
-        """Calcule et retourne la surface (aire) du triangle."""
         return (self.cote_a * self.cote_b) / 2
 
     def est_isocele(self):
-        """Retourne True si le triangle est isocèle (les deux petits côtés sont égaux), sinon False."""
         return self.cote_a == self.cote_b
 
 
